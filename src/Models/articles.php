@@ -1,7 +1,7 @@
 <?php
+
 namespace App\Models;
 
-use App\Standards\Database;
 use App\Standards\ModelAbstract;
 
 class Articles extends ModelAbstract
@@ -15,11 +15,22 @@ class Articles extends ModelAbstract
         'text' => 'text'
     );
 
+    /**
+     * getTitle
+     *
+     * @return string
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * setTitle
+     *
+     * @param  mixed $title
+     * @return self
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -27,36 +38,26 @@ class Articles extends ModelAbstract
         return $this;
     }
 
+    /**
+     * getText
+     *
+     * @return string
+     */
     public function getText(): ?string
     {
         return $this->text;
     }
 
+    /**
+     * setText
+     *
+     * @param  mixed $text
+     * @return self
+     */
     public function setText(string $text): self
     {
-        $this->text=$text;
+        $this->text = $text;
 
-        return $this;
-    }
-
-    public function read(): ?self
-    {
-        $db = new Database;
-        return $this;
-    }
-
-    public function delete(): ?self
-    {
-        return $this;
-    }
-
-    public function create(): ?self
-    {
-        return $this;
-    }
-
-    public function update(): ?self
-    {
         return $this;
     }
 }
